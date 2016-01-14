@@ -1,0 +1,36 @@
+\newcommand{\functionListing}[2]{\hypertarget{#1}{\textbf{/#1/} #2}}
+\newcommand{\refFnListing}[2]{\hyperlink{#1}{#2}}
+
+\newcommand{\inputDefault}[2]{\input{../default/#1/#2}}
+\newcommand{\inputDefaultByFormat}[1]{\input{../default/\documentFormat/#1}}
+
+\newcommand{\setDocumentName}[1]{\def \documentName {#1}}
+\newcommand{\setDocumentFormat}[1]{\def \documentFormat {#1}}
+
+\newcommand{\printTitle}{\inputDefault{\documentFormat}{title}}
+\newcommand{\printTableOfContents}{\tableofcontents}
+
+\newcommand{\printListOfFigures}{\listoffigures}
+\newcommand{\printBibliography}{\bibliography{../default/sources}}{\bibliographystyle{plain}}
+\newcommand{\printGlossary}{\printglossary[nonumberlist]}
+
+% Better tables
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand\addrow[2]{#1 &#2\\ }
+\newcommand\addheading[2]{#1 &#2\\ \hline}
+\newcommand\tabularhead{\begin{tabular}{lp{13cm}}\hline}
+\newcommand\addmulrow[2]{ \begin{minipage}[t][][t]{2.5cm}#1\end{minipage}% 
+	&\begin{minipage}[t][][t]{8cm}
+	\begin{enumerate} #2   \end{enumerate}
+	\end{minipage}\\ }
+\newenvironment{usecase}{\tabularhead}{\hline\end{tabular}}
+
+\newcommand{\graphic}[3]{
+	\begin{figure}[H]
+		\begin{center}
+			\input{graphics/#1}
+			\caption{#2}
+			\label{#3}
+		\end{center}	
+	\end{figure}	
+}

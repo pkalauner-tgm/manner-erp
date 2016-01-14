@@ -1,4 +1,4 @@
-.PHONY: all machbarkeitstudie aufgabenstellungen lastenheft pflichtenheft managementletter managementsummary projekthandbuch businessplan diplomarbeit gather deploy clean
+.PHONY: all erp-ausarbeitung gather deploy clean
 
 all: gather
 

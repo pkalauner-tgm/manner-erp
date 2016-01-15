@@ -7,7 +7,7 @@ erp-ausarbeitung:
 
 
 gather: erp-ausarbeitung outfolder
-	cp erp-ausarbeitung/erp-ausarbeitung.pdf out/erp-ausarbeitung.pdf
+	cp erp-ausarbeitung/erp-ausarbeitung.pdf out/Manner_ERP_Ausarbeitung.pdf
 
 deploy: gather deployfolder
 	rm -Rf deploy/`git log --pretty=format:'%H' -n 1`/

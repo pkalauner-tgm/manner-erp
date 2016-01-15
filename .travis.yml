@@ -1,0 +1,14 @@
+before_install:
+- sudo apt-get update && sudo apt-get install texlive-fonts-recommended
+  texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng latexmk texlive-lang-german
+script:
+- make
+deploy:
+  provider: releases
+  api_key:
+    secure: dJrURUEc5kLx+JEuQXl24hWdxXDGmnmWp1/3p9KmxTh/qQSmskiHpfWRRfr/67EIuxCV7CRsp8w5FlnfH0janvLfLcz6BqEE9+R3SjgKKoc6PG5/Kx6BITCz+gEZKdlJSomWi2VNAz8+G+s983ZtDXsmuLllAdHJvQdsopTGURRNA3Dc7PJ0Mhxcv25dVXANJ2jLK6BpN5kMSRnjucI+boPcRIHhhhqjQxCkxXb6kvKjWzcuZ1c9IDnRzJyKm8QWV1alf9OF5GQyUoNJKIIamjyXLUxvnkCWgGenaLqMmDttldIfgpAUQrE6+w4cNLW8FKdd2Wgif1Uh/81TdStyaSqqIBVYO90E8KMBhhdxGbZWVLBacymMxkrmrQ28xjuEFxKIPh4pYQEmEkUDhwCzAahw5LgkrwsE+2POqScFAHEujDxWlT/UyFF97rxtfXukm7Evr+N9X03XFg6TvUkK4t4DGmSZ7qb1L6v0gUFxP8y08Opo430h4izCduWlXr99SzpZuvQ8Tdt61ddo38fyvdaEdHV+uxLPAJjWcd+CXQd8FYreWxzO0Cxu2pl3m0YDerMJMrEmckvfaehV5aMNhuYWcJutOynBJEQ630+jcvMj7ck0nS2Eh1JKfvENSJQCTCOq9lV2/kdOxIPtXhUrtXuBMOn/zEGHcHU2CzQgVyU=
+  file:
+  - out/Manner_ERP_Ausarbeitung.pdf
+  skip_cleanup: true
+  on:
+    tags: true

@@ -1,5 +1,5 @@
 all:
-	latexmk -pdf
+	latexmk -pdf -interaction=nonstopmode -f
 
 indent:
 	latexindent *.tex -w -s

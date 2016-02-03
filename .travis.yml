@@ -1,8 +1,8 @@
 sudo: required
 dist: trusty
 before_install:
-- sudo apt-get update && sudo apt-get install texlive-fonts-recommended
-  texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng latexmk texlive-lang-german
+- sudo apt-get update
+- sudo apt-get install -y texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng latexmk texlive-lang-german
 - sudo mkdir /usr/share/texmf/tex/latex/picins
 - sudo wget -O /usr/share/texmf/tex/latex/picins/picins.sty http://mirrors.ctan.org/macros/latex209/contrib/picins/picins.sty
 - sudo texhash
